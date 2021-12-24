@@ -49,7 +49,7 @@ project "GLFW"
         files
         {
             "src/cocoa_init.m",
-            "src/cocoa_joystick.h",
+            "src/cocoa_joystick.m",
             "src/cocoa_monitor.m",
             "src/cocoa_window.m",
             "src/cocoa_time.c",
