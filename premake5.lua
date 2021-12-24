@@ -41,6 +41,31 @@ project "GLFW"
 		{
 			"_GLFW_X11"
 		}
+    filter "system:macosx"
+        pic "On"
+        systemversion "latest"
+        
+        sysincludedirs {"include"}
+        files
+        {
+            "src/cocoa_init.m",
+            "src/cocoa_joystick.h",
+            "src/cocoa_monitor.m",
+            "src/cocoa_window.m",
+            "src/cocoa_time.c",
+            "src/posix_thread.c",
+            "src/nsgl_context.m",
+            "src/egl_context.c",
+            "src/osmesa_context.c"
+        }
+        
+        defines
+        {
+            defines "_GLFW_COCOA"
+        }
+        
+    filter "files:**.m"
+        compileas "Objective-C"
 
 	filter "system:windows"
 		systemversion "latest"
