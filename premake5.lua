@@ -40,7 +40,8 @@ project "GLFW"
 			"src/glx_context.c",
 			"src/egl_context.c",
 			"src/osmesa_context.c",
-			"src/linux_joystick.c"
+			"src/linux_joystick.c",
+			"src/posix_poll.c"
 		}
 
 		defines
